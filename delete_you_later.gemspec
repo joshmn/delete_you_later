@@ -9,19 +9,11 @@ Gem::Specification.new do |spec|
   spec.version     = DeleteYouLater::VERSION
   spec.authors     = ["Josh Brody"]
   spec.email       = ["josh@josh.mn"]
-  spec.homepage    = ""
-  spec.summary     = "Summary of DeleteYouLater."
-  spec.description = "Description of DeleteYouLater."
+  spec.homepage    = "https://github.com/joshmn/delete_you_later"
+  spec.summary     = "Delete/destroy associated ActiveRecord records in the background with ease."
+  spec.description = spec.summary
   spec.license     = "MIT"
 
-  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
-  # to allow pushing to a single host or delete this section to allow pushing to any host.
-  if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
-  else
-    raise "RubyGems 2.0 or newer is required to protect against " \
-      "public gem pushes."
-  end
   spec.files = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
   end
