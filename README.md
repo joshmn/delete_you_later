@@ -45,9 +45,9 @@ You can change these at runtime:
 
 ```ruby
 class Post < ApplicationRecord
-  has_many :posts
+  has_many :comments
   
-  destroy_dependents_later :posts, batch_size: 10, scope: :recent 
+  destroy_dependents_later :comments, batch_size: 10, scope: :unapproved 
 end
 ```
 
