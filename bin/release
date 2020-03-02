@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require_relative '../lib/delete_you_later/version'
+
+version = DeleteYouLater::VERSION
+system("gem build delete_you_later.gemspec")
+system("gem push delete_you_later-#{version}.gem")
+system("rm delete_you_later-#{version}.gem")
+system("git tag -a v#{version} -m 'version #{version}'")
+system("git push origin v#{version}")
